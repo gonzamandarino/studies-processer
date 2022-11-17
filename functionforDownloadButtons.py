@@ -6,6 +6,7 @@ import base64
 import uuid
 import re 
 import importlib.util
+import pdfkit
 
 
 def import_from_file(module_name: str, filepath: str):
@@ -136,6 +137,11 @@ def download_button(object_to_download, download_filename, button_text):
                 color: white;
                 }}
         </style> """
+
+    if download_filename == "File.pdf":
+        html_string = object_to_download.to_html()
+        pdfkit.from_string(html_string, "output_file.pdf") 
+
 
     dl_link = (
         custom_css
