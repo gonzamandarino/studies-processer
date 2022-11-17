@@ -90,6 +90,9 @@ def download_button(object_to_download, download_filename, button_text):
     #        st.write(e)
     #        return None
 
+
+    object_to_download_pdf = object_to_download
+
     # if:
     if isinstance(object_to_download, bytes):
         pass
@@ -139,8 +142,9 @@ def download_button(object_to_download, download_filename, button_text):
         </style> """
 
     if download_filename == "File.pdf":
-        html_string = object_to_download.to_html()
-        pdfkit.from_string(html_string, "output_file.pdf") 
+            html_string = object_to_download_pdf.to_html()
+            pdfkit.from_string(html_string, "output_file.pdf") 
+        
 
 
     dl_link = (
