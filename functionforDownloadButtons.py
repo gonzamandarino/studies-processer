@@ -4,8 +4,7 @@ import pandas as pd
 import json
 import base64
 import uuid
-import re
-import pdfkit 
+import re 
 import importlib.util
 
 
