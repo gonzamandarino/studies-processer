@@ -80,7 +80,7 @@ with c30:
     else:
         st.info(
             f"""
-                👆 Upload a .csv file first. Sample to try: [biostats.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/biostats.csv)
+                👆 Upload a .csv file first.
                 """
         )
 
@@ -132,6 +132,6 @@ with c29:
 with c30:
     CSVButton = download_button(
         df,
-        "File.csv",
-        "Download to TXT",
+        "File.pdf",
+        "Download to PDF",
     )
